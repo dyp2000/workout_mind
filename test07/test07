@@ -1,0 +1,1 @@
+erl +A 128 +K true -config test07 -s test07_start -setcookie 0123456789

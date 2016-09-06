@@ -1,0 +1,3 @@
+io:format("~ts", [erlang:system_info(system_version)]).
+io:fwrite("Test #07~n", []).
+code:add_patha("./ebin").
