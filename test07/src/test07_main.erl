@@ -52,9 +52,9 @@ start_link() ->
 	{ok, State :: #state{}} | {ok, State :: #state{}, timeout() | hibernate} |
 	{stop, Reason :: term()} | ignore).
 init([]) ->
-	[test07_pool_mgr:calc(test07_pool_worker, X) || X <- lists:seq(1, 1000000)],
 	io:format("Progress "),
 	Timer = erlang:send_after(1000, self(), check_result),
+	[test07_pool_mgr:calc(test07_pool_worker, X) || X <- lists:seq(1, 1000000)],
 	{ok, #state{timer = Timer}}.
 
 %%--------------------------------------------------------------------
