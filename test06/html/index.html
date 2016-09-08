@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test #06</title>
+	</head>
+	<body>
+		<h1>Welcome to Test #06 page.</h1>
+		<p>Test 06 request: <a href="#" onclick="post_xml();">http://127.0.0.1:9080/capture</a></p>
+	</body>
+
+<script type="text/javascript">
+	function post_xml() {
+		var xml = 
+			'<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">'+
+			'<S:Body>'+
+			'<ns2:GetItemByGTINResponse xmlns:ns2="urn:org.gs1ru.gs46.intf">'+
+			'<ns2:GS46Item>'+
+			'<DataRecord>'+
+			'<record dataObjectId="PACK_BASE_UNIT" idRecord="3386580" parentIdRecord="31761" src="GS46NEW" variant="0">'+
+			'<BaseAttributeValues>'+
+			'<value attrType="STRING" baseAttrId="PROD_COVER_GTIN" value="4600209001493"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_COVER_PREFIX" value="4600209"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_PVN" value="0"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_DESC" value="смесь сухая молочная &quot;малютка 1 плюс&quot;"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_NAME" value="&quot;Малютка&quot;™"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_DESC_FULL" value="смесь сухая молочная &quot;малютка 1 плюс&quot;"/>'+
+			'<value attrType="FLOAT" baseAttrId="PROD_COUNT" value="400"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_MEASURE" descr="Г" value="GRM"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_GCPCL_SEG" descr="50000000 - Продукты пищевые/Напитки/Табак" value="GPCCLSEG_50000000"/>'+
+			'<value attrType="SUBDICTIONARY" baseAttrId="PROD_GCPCL_FAMILY" descr="50190000 - Полуфабрикаты/Готовые блюда" value="GPCCLFAM_50190000"/>'+
+			'<value attrType="SUBDICTIONARY" baseAttrId="PROD_GCPCL_CLASS" descr="50193000 - Младенцы/Дошкольники - Пищевые продукты/Напитки" value="GPCCLCLS_50193000"/>'+
+			'<value attrType="SUBDICTIONARY" baseAttrId="PROD_GCPCL_BRICK" descr="10000575 - Смеси для Детского Питания (Длительного хранения)" value="GPCCLBRK_10000575"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_COVER_TYPE_DICT" descr="ПАЧКА" value="PA"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_COVER_MATERIAL" descr="КАРТОН" value="34"/>'+
+			'<value attrType="STRING" baseAttrId="BRAND_OWNER_GLN" value="4600209999998"/>'+
+			'<value attrType="STRING" baseAttrId="BRAND_OWNER_NAME" value="ОАО &quot;Детское питание &quot;Истра-Нутриция&quot;"/>'+
+			'<value attrType="STRING" baseAttrId="GS1_MEMBER_GLN" value="4600209999998"/>'+
+			'</BaseAttributeValues>'+
+			'<InfoTypeRecords>'+
+			'<record idRecord="3386580" infoTypeId="SRC_1_10000575"/>'+
+			'<record idRecord="3386580" infoTypeId="SRC_2_10000575"/>'+
+			'<record idRecord="3386580" infoTypeId="SRC_3_10000575"/>'+
+			'<record idRecord="3386580" infoTypeId="SRC_150_10000575"/>'+
+			'<record idRecord="3386580" infoTypeId="SRC_151_10000575"/>'+
+			'<record idRecord="3386580" infoTypeId="SRC_152_10000575"/>'+
+			'<record idRecord="3386580" infoTypeId="SRC_154_10000575"/>'+
+			'<record idRecord="3386580" infoTypeId="SRC_156_10000575"/>'+
+			'<record idRecord="3386580" infoTypeId="SRC_165_10000575"/>'+
+			'</InfoTypeRecords>'+
+			'<ReqValues>'+
+			'<reqValue>4600209001677</reqValue>'+
+			'</ReqValues>'+
+			'<SubDataObjectRecords>'+
+			'<record dataObjectId="PACK_GROUP_UNIT" idRecord="4419984" parentIdRecord="3386580" src="GS46NEW" variant="0">'+
+			'<BaseAttributeValues>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_CODE_TYPE" descr="EAN-13" value="EAN13"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_COVER_GTIN" value="4600209001677"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_PVN" value="0"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_COVER_TYPE_DICT" descr="ГОФРОКОРОБ" value="CTN"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_COVER_MATERIAL" descr="КАРТОН" value="34"/>'+
+			'<value attrType="FLOAT" baseAttrId="PROD_COUNT" value="20"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_MEASURE" descr="ШТ" value="PCE"/>'+
+			'<value attrText="Закодировано из 1С" attrType="BOOLEAN" baseAttrId="PROD_CODED_FROM_1C" descr="No" groupId="0" value="0"/>'+
+			'<value attrText="Тип/материал изменен оператором" attrType="BOOLEAN" baseAttrId="PROD_TM_CHANGED_BY_GS46" descr="No" groupId="0" value="0"/>'+
+			'</BaseAttributeValues>'+
+			'<ReqValues/>'+
+			'</record>'+
+			'<record dataObjectId="PACK_GROUP_UNIT" idRecord="11221233" parentIdRecord="3386580" src="GS46NEW" variant="0">'+
+			'<BaseAttributeValues>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_CODE_TYPE" descr="EAN-13" value="EAN13"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_COVER_GTIN" value="4600209005040"/>'+
+			'<value attrType="STRING" baseAttrId="PROD_PVN" value="0"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_COVER_TYPE_DICT" descr="ГОФРОКОРОБ" value="CTN"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_COVER_MATERIAL" descr="КАРТОН" value="34"/>'+
+			'<value attrType="FLOAT" baseAttrId="PROD_COUNT" value="18"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_MEASURE" descr="ШТ" value="PCE"/>'+
+			'<value attrText="Закодировано из 1С" attrType="BOOLEAN" baseAttrId="PROD_CODED_FROM_1C" descr="No" groupId="0" value="0"/>'+
+			'<value attrText="Тип/материал изменен оператором" attrType="BOOLEAN" baseAttrId="PROD_TM_CHANGED_BY_GS46" descr="No" groupId="0" value="0"/>'+
+			'</BaseAttributeValues>'+
+			'<ReqValues/>'+
+			'</record>'+
+			'<record dataObjectId="PCK_BASE_TR_CVR" idRecord="3386581" parentIdRecord="3386580" src="GS46NEW" variant="0">'+
+			'<BaseAttributeValues>'+
+			'<value attrType="STRING" baseAttrId="ITF14_PVN" value="0"/>'+
+			'<value attrType="STRING" baseAttrId="ITF14_GTIN" value="14600209001490"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="ITF14_TYPE_DICT" descr="ГОФРОКОРОБ" value="CTN"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="ITF14_MATERIAL" descr="КАРТОН" value="34"/>'+
+			'<value attrType="FLOAT" baseAttrId="PROD_COUNT_PCK" value="20"/>'+
+			'<value attrType="FLOAT" baseAttrId="ITF14_AMOUNT" value="20"/>'+
+			'<value attrType="DICTIONARY" baseAttrId="ITF14_MEASURE" descr="ШТ" value="PCE"/>'+
+			'<value attrText="Закодировано из 1С" attrType="BOOLEAN" baseAttrId="ITF14_CODED_FROM_1C" descr="No" groupId="0" value="0"/>'+
+			'<value attrText="Тип/материал изменен оператором" attrType="BOOLEAN" baseAttrId="PROD_TM_CHANGED_BY_GS46" descr="No" groupId="0" value="0"/>'+
+			'</BaseAttributeValues>'+
+			'<ReqValues/>'+
+			'</record>'+
+			'<record dataObjectId="PROD_CLASS" idRecord="18228024" parentIdRecord="3386580" src="GS46NEW">'+
+			'<BaseAttributeValues>'+
+			'<value attrType="DICTIONARY" baseAttrId="PROD_CATEGORY" descr="Продукты питания" value="PCL_382667"/>'+
+			'<value attrType="SUBDICTIONARY" baseAttrId="PROD_DTYPE" descr="Детское питание" value="PCL_382867"/>'+
+			'</BaseAttributeValues>'+
+			'<ReqValues/>'+
+			'</record>'+
+			'</SubDataObjectRecords>'+
+			'</record>'+
+			'</DataRecord>'+
+			'<Result errCode="0" errMsg="The request has been successfully completed and the response is in the body of the SOAP message" errName="NO_ERROR"/>'+
+			'</ns2:GS46Item>'+
+			'</ns2:GetItemByGTINResponse>'+
+			'</S:Body>'+
+			'</S:Envelope>';
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("POST", "http://127.0.0.1:9080/capture", true);
+		xhttp.send(xml);
+	}
+</script>
+
+</html>
